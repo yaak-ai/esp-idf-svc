@@ -23,6 +23,11 @@ experimental = ["embedded-svc/experimental"]
 embassy-time-driver = ["embassy-time"]
 embassy-time-isr-queue = ["embassy-sync", "embassy-time", "esp-idf-hal/embassy-sync"]
 
+
+[patch.crates-io]
+esp-idf-sys = { git = "https://github.com/yaak-ai/esp-idf-sys", rev = "ff6e8961f4c09ecfcdd76fc11a52539260adf0b5", features = ["binstart"] }
+esp-idf-hal = { git = "https://github.com/yaak-ai/esp-idf-hal", rev = "4c7938573366beceef62342d8e1f72fed5216fca" }
+
 [dependencies]
 heapless = { version = "0.7", default-features = false }
 enumset = { version = "1", default-features = false }
